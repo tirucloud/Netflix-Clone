@@ -94,6 +94,8 @@ Install below plugins
 
 10 kubernetes cli
 
+11 Prometheus metircs
+
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
 Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
