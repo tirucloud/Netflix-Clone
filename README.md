@@ -54,7 +54,11 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 1. **SonarQube and Trivy:**
   - SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
   - scan image using trivy
-        
+``` bash
+cd Netflix-Clone
+trivy fs .
+trivy image scan
+``` 
         
 2. **Integrate SonarQube and Configure:**
     - Integrate SonarQube with your CI/CD pipeline.
