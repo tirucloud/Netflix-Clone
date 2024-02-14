@@ -291,8 +291,9 @@ pipeline{
    You can access Prometheus targets at:
 
    `http://<your-prometheus-ip>:9090/targets`
+   
    You can see metrics
-   ` http://<jenkins-ip>:8080/prometheus/
+   `http://<jenkins-ip>:8080/prometheus/`
 
 ####Grafana
 
