@@ -78,6 +78,18 @@ Install below plugins
 
 4 Email Extension Plugin
 
+5 Docker Commons
+
+6 Doccker Pipeline
+
+7 Docker API
+
+8 docker-build-step
+
+9 kubernetes
+
+10 kubernetes cli
+
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
 Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
@@ -126,11 +138,7 @@ Create a Jenkins webhook
 - Navigate to "Manage Jenkins" → "Manage Plugins."
 - Click on the "Available" tab and search for "Docker."
 - Check the following Docker-related plugins:
-  - Docker
-  - Docker Commons
-  - Docker Pipeline
-  - Docker API
-  - docker-build-step
+  - 
 - Click on the "Install without restart" button to install these plugins.
 
 **Add DockerHub Credentials:**
@@ -227,22 +235,9 @@ pipeline{
 
 ```
 
+### Prometheus:**
 
-
-   **Installing Prometheus:**
-
-  Here's a brief explanation of the key parts in this /etc/systemd/system/prometheus.service file:
-
-   - `User` and `Group` specify the Linux user and group under which Prometheus will run.
-
-   - `ExecStart` is where you specify the Prometheus binary path, the location of the configuration file (`prometheus.yml`), the storage directory, and other settings.
-
-   - `web.listen-address` configures Prometheus to listen on all network interfaces on port 9090.
-
-   - `web.enable-lifecycle` allows for management of Prometheus through API calls.
-
-  
-   You can access Prometheus in a web browser using your server's IP and port 9090:
+1. You can access Prometheus in a web browser using your server's IP and port 9090:
 
    `http://<your-server-ip>:9090`
 
@@ -293,56 +288,6 @@ pipeline{
 
 
 ####Grafana
-
-**Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus**
-
-**Step 1: Install Dependencies:**
-
-First, ensure that all necessary dependencies are installed:
-
-```bash
-sudo apt-get update
-sudo apt-get install -y apt-transport-https software-properties-common
-```
-
-**Step 2: Add the GPG Key:**
-
-Add the GPG key for Grafana:
-
-```bash
-wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
-```
-
-**Step 3: Add Grafana Repository:**
-
-Add the repository for Grafana stable releases:
-
-```bash
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
-```
-
-**Step 4: Update and Install Grafana:**
-
-Update the package list and install Grafana:
-
-```bash
-sudo apt-get update
-sudo apt-get -y install grafana
-```
-
-**Step 5: Enable and Start Grafana Service:**
-
-To automatically start Grafana after a reboot, enable the service:
-
-```bash
-sudo systemctl enable grafana-server
-```
-
-Then, start Grafana:
-
-```bash
-sudo systemctl start grafana-server
-```
 
 **Step 6: Check Grafana Status:**
 
