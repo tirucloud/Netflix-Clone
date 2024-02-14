@@ -94,7 +94,7 @@ Install below plugins
 
 10 kubernetes cli
 
-11 Prometheus metircs
+11 Prometheus metircs (This plugin requires restart of the jenkins service)
 
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
