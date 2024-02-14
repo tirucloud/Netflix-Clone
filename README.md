@@ -25,8 +25,6 @@ ENTER
 ```
 ### Clone this repo to local system
 ### Build and run your application using Docker containers:
-    
-    ```bash
     docker build -t netflix .
     docker run -d --name netflix -p 8081:80 netflix:latest
     
@@ -34,7 +32,6 @@ ENTER
     docker stop <containerid>
     docker rm -f netflix
     docker rmi -f netflix
-    ```
 
 It will show an error cause you need API key
 
